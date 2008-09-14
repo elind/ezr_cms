@@ -47,7 +47,7 @@ module L2
           
           # Check in EZR design directories
           template_path = false
-          @ezr[:design][:directories].each do |directory|
+          @ezr_config[:design][:config_order].each do |directory|
             template_candidate = "#{RAILS_ROOT}/app/ezr/sites/#{directory}/views/#{params[:template]}#{extension}"
             if File.exists?(template_candidate)
               template_path = template_candidate

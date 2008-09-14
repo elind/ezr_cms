@@ -11,9 +11,18 @@ end
 
 ActionController::Base.class_eval do
   def ezr_setup
-    ## TD: Set this dynamically in from routes / Erik
-    @ezr = EZR_FULL_CONFIG[:ubs]
-    @debug_mode = @ezr[:env][:debug_mode]
+    ## TD: Set this dynamically from routes / Erik
+    @current_site_access = :ubs_en
+    
+    config_order = EZR_GLOBAL_CONFIG[@current_site_access][:config_order]
+    @ezr_config = {:design => {:config_order => config_order}}
+    
+    for site_access in config_order.reverse
+      if temp = EZR_FULL_CONFIG[site_access.to_sym]
+        @ezr_config.merge!(temp)
+      end
+    end
+    @debug_mode = @ezr_config[:env][:debug_mode]
     @templates_used = [] if @debug_mode
   end
 end

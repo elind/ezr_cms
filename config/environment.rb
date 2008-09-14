@@ -67,6 +67,3 @@ Rails::Initializer.run do |config|
 end
 
 require "ruby-debug"
-
-raw_config = File.read(RAILS_ROOT + "/config/ezr/main_config.yml")
-EZR_FULL_CONFIG = YAML.load(raw_config)
