@@ -12,7 +12,7 @@ module L2
         def acts_as_ezr_controller(*args)
           extend  L2::EZR::CMSController::SingletonMethods
           include L2::EZR::CMSController::InstanceMethods
-#
+
 #          # Default actions
 #          @ac_authorized_actions = {
 #            "show" => :read,
@@ -28,7 +28,6 @@ module L2
 #            end
 #          end
 
-          layout 'ezr'
           before_filter :ezr_setup
         end
       end
@@ -40,36 +39,6 @@ module L2
       end
 
       module InstanceMethods
-        def ezr_render(params={})
-          
-          # Set this from params
-          extension = ".html.erb"
-          
-          # Check in EZR design directories
-          template_path = false
-          @ezr_config[:design][:config_order].each do |directory|
-            template_candidate = "#{RAILS_ROOT}/app/ezr/sites/#{directory}/views/#{params[:template]}#{extension}"
-            if File.exists?(template_candidate)
-              template_path = template_candidate
-              break
-            else
-              next
-            end
-          end
-          
-          # Check in views directory
-          unless template_path
-            template_file = "#{RAILS_ROOT}/app/views/#{params[:template]}#{extension}"
-            if File.exists?(template_file)
-              template_path = template_file
-            end
-          end
-          
-          @templates_used << {:requested => params[:template], :rendered => template_path} if @debug_mode
-          raise "Could not find template #{params[:template]} in any of the #{EZR[:design][:directories].inspect} directories nor in the default location app/views/#{params[:template]}." unless template_path
-      
-          render :file => template_path
-        end
 #        def restfully_authorize
 #          action = params[:action]
 #          if self.class.ac_authorized_actions.include?(action)

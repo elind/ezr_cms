@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  layout 'ezr'
   acts_as_ezr_controller
   
   # GET /pages
@@ -7,7 +8,7 @@ class PagesController < ApplicationController
     @pages = Page.find(:all)
 
     respond_to do |format|
-      format.html { ezr_render :template => "pages/index" }
+      format.html {}
       format.xml  { render :xml => @pages }
     end
   end
@@ -18,7 +19,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     respond_to do |format|
-      format.html { ezr_render :template => "pages/show" }
+      format.html {}
       format.xml  { render :xml => @page }
     end
   end
@@ -29,7 +30,7 @@ class PagesController < ApplicationController
     @page = Page.new
 
     respond_to do |format|
-      format.html { ezr_render :template => "pages/new" }
+      format.html {}
       format.xml  { render :xml => @page }
     end
   end
@@ -37,7 +38,6 @@ class PagesController < ApplicationController
   # GET /pages/1/edit
   def edit
     @page = Page.find(params[:id])
-    ezr_render :template => "pages/edit"
   end
 
   # POST /pages

@@ -3,19 +3,10 @@ require './test/test_helper'
 class PagesControllerTest < ActionController::TestCase
   
   def test_template_hierarchy
-    
-    # Only the default design available
-    EZR_GLOBAL_CONFIG[:ubs_en][:config_order] = ["default"]
-    get :index
-    assert_select "h1", "Listing default pages"
-    get :show, {:id => 1}
-    assert_select "h1", "Default show page"
-
-    # Add the UBS design
     # The index template is overridden in ubs
-    EZR_GLOBAL_CONFIG[:ubs_en][:config_order] = ["ubs_en", "ubs", "default"]
     get :index
     assert_select "h1", "Listing UBS pages"
+    assert_select "title", "UBS English Pages: index"
     # The show template is overridden in ubs_en
     get :show, {:id => 1}
     assert_select "h1", "UBS English show page"
