@@ -6,4 +6,7 @@ class EzrContentClass < ActiveRecord::Base
   validates_presence_of :identifier, :display_name
   validates_uniqueness_of :identifier
   
+  def to_s
+    display_name
+  end
 end

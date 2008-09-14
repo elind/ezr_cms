@@ -42,12 +42,15 @@ module L2
       module InstanceMethods
         def ezr_render(params={})
           
+          # Set this from params
+          extension = ".html.erb"
+          
           # Check in EZR design directories
           template_path = false
           @ezr[:design][:directories].each do |directory|
-            current_template_location = "ezr/sites/#{directory}/#{params[:template]}.html.erb"
-            if File.exists?("#{RAILS_ROOT}/app/views/#{current_template_location}")
-              template_path = current_template_location
+            template_candidate = "#{RAILS_ROOT}/app/ezr/sites/#{directory}/views/#{params[:template]}#{extension}"
+            if File.exists?(template_candidate)
+              template_path = template_candidate
               break
             else
               next
@@ -56,16 +59,16 @@ module L2
           
           # Check in views directory
           unless template_path
-            template_file = "#{RAILS_ROOT}/app/views/#{params[:template]}.html.erb"
+            template_file = "#{RAILS_ROOT}/app/views/#{params[:template]}#{extension}"
             if File.exists?(template_file)
-              template_path = params[:template]
+              template_path = template_file
             end
           end
           
           @templates_used << {:requested => params[:template], :rendered => template_path} if @debug_mode
           raise "Could not find template #{params[:template]} in any of the #{EZR[:design][:directories].inspect} directories nor in the default location app/views/#{params[:template]}." unless template_path
       
-          render :template => template_path
+          render :file => template_path
         end
 #        def restfully_authorize
 #          action = params[:action]

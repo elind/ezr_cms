@@ -3,14 +3,14 @@ tdd_content_class_attribute:
   identifier: tdd_content_class_attribute
   display_name: TDD Content Class Attribute
   ezr_content_class_id: 1
-  atype: String
+  atype: string
 
 sheet_music_title:
   id: 201
   identifier: title
   display_name: Title
   ezr_content_class_id: 301
-  atype: String
+  atype: string
 
 sheet_music_length:
   id: 202
