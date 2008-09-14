@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Pages: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<p>
+	<%= link_to "Pages", pages_path %>
+	<%= link_to "Content classes", ezr_content_classes_path %>
+	<%= link_to "Content class attributes", ezr_content_class_attributes_path %>
+</p>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+<%= render :partial => "ezr/system/partials/debug/debug" if @debug_mode %>
+
+</body>
+</html>
