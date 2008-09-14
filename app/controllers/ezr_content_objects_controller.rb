@@ -1,4 +1,6 @@
 class EzrContentObjectsController < ApplicationController
+  layout 'ezr'
+
   # GET /ezr_content_objects
   # GET /ezr_content_objects.xml
   def index

@@ -1,4 +1,5 @@
 class EzrContentObjectAttributesController < ApplicationController
+  layout 'ezr'
   # GET /ezr_content_object_attributes
   # GET /ezr_content_object_attributes.xml
   def index

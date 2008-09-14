@@ -9,5 +9,27 @@ sheet_music_title:
   id: 201
   identifier: title
   display_name: Title
-  ezr_content_class_id: 101
+  ezr_content_class_id: 301
   atype: String
+
+sheet_music_length:
+  id: 202
+  identifier: length
+  display_name: Length
+  ezr_content_class_id: 301
+  atype: float
+
+sheet_music_serial:
+  id: 203
+  identifier: serial
+  display_name: Serial
+  ezr_content_class_id: 301
+  atype: int
+
+sheet_music_description:
+  id: 204
+  identifier: description
+  display_name: Description
+  ezr_content_class_id: 301
+  atype: text
+

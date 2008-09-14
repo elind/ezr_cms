@@ -4,6 +4,6 @@ tdd_content_class:
   display_name: TDD Content Class
 
 sheet_music:
-  id: 101
+  id: 301
   identifier: sheet_music
   display_name: Sheet music

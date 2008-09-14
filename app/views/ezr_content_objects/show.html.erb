@@ -9,10 +9,16 @@
 </p>
 
 <p>
-  <b>Ezr content class:</b>
-  <%=h @ezr_content_object.ezr_content_class_id %>
+  <b>Content class:</b>
+  <%=h @ezr_content_object.content_class %>
 </p>
 
+<% for attribute in @ezr_content_object.c_attributes -%>
+<p>
+	<b><%=h attribute.display_name %></b>
+	<%=h attribute %> (<%= attribute.atype %>)<br/>
+</p>
+<% end -%>
 
 <%= link_to 'Edit', edit_ezr_content_object_path(@ezr_content_object) %> |
 <%= link_to 'Back', ezr_content_objects_path %>

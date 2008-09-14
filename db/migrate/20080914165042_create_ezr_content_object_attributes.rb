@@ -13,6 +13,8 @@ class CreateEzrContentObjectAttributes < ActiveRecord::Migration
 
       t.timestamps
     end
+    directory = File.join(File.dirname(__FILE__), "../../test/fixtures" )
+    Fixtures.create_fixtures(directory, "ezr_content_object_attributes" )
   end
 
   def self.down
