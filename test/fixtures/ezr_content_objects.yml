@@ -1,0 +1,11 @@
+tdd_content_object:
+  id: 1
+  identifier: tdd_content_object
+  display_name: TDD Content Object
+  ezr_content_class_id: 1
+
+sheet_music_symphony_in_c:
+  id: 101
+  identifier: sheet_music_symphony_in_c
+  display_name: Symphony in C
+  ezr_content_class_id: sheet_music

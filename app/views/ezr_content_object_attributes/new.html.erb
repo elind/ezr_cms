@@ -1,0 +1,43 @@
+<h1>New ezr_content_object_attribute</h1>
+
+<% form_for(@ezr_content_object_attribute) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :identifier %><br />
+    <%= f.text_field :identifier %>
+  </p>
+  <p>
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </p>
+  <p>
+    <%= f.label :atype %><br />
+    <%= f.text_field :atype %>
+  </p>
+  <p>
+    <%= f.label :ezr_content_object_id %><br />
+    <%= f.text_field :ezr_content_object_id %>
+  </p>
+  <p>
+    <%= f.label :int_value %><br />
+    <%= f.text_field :int_value %>
+  </p>
+  <p>
+    <%= f.label :float_value %><br />
+    <%= f.text_field :float_value %>
+  </p>
+  <p>
+    <%= f.label :string_value %><br />
+    <%= f.text_field :string_value %>
+  </p>
+  <p>
+    <%= f.label :text_value %><br />
+    <%= f.text_area :text_value %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', ezr_content_object_attributes_path %>

@@ -1,0 +1,34 @@
+<h1>Listing ezr_content_object_attributes</h1>
+
+<table>
+  <tr>
+    <th>Identifier</th>
+    <th>Display name</th>
+    <th>Atype</th>
+    <th>Ezr content object</th>
+    <th>Int value</th>
+    <th>Float value</th>
+    <th>String value</th>
+    <th>Text value</th>
+  </tr>
+
+<% for ezr_content_object_attribute in @ezr_content_object_attributes %>
+  <tr>
+    <td><%=h ezr_content_object_attribute.identifier %></td>
+    <td><%=h ezr_content_object_attribute.display_name %></td>
+    <td><%=h ezr_content_object_attribute.atype %></td>
+    <td><%=h ezr_content_object_attribute.ezr_content_object_id %></td>
+    <td><%=h ezr_content_object_attribute.int_value %></td>
+    <td><%=h ezr_content_object_attribute.float_value %></td>
+    <td><%=h ezr_content_object_attribute.string_value %></td>
+    <td><%=h ezr_content_object_attribute.text_value %></td>
+    <td><%= link_to 'Show', ezr_content_object_attribute %></td>
+    <td><%= link_to 'Edit', edit_ezr_content_object_attribute_path(ezr_content_object_attribute) %></td>
+    <td><%= link_to 'Destroy', ezr_content_object_attribute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ezr_content_object_attribute', new_ezr_content_object_attribute_path %>

@@ -1,0 +1,35 @@
+tdd_content_object_attribute:
+  content_class_attribute_id: 1
+  identifier: tdd_content_class_attribute
+  display_name: TDD Content Class Attribute
+  atype: string
+  ezr_content_object_id: 1
+  string_value: TDD String Value
+
+symphony_in_c_title:
+  identifier: title
+  display_name: Title
+  atype: string
+  ezr_content_object_id: 101
+  string_value: Symphony in C
+
+symphony_in_c_length:
+  identifier: length
+  display_name: Length
+  atype: float
+  ezr_content_object_id: 101
+  float_value: 5.34
+
+symphony_in_c_serial:
+  identifier: serial
+  display_name: Serial
+  atype: int
+  ezr_content_object_id: 101
+  int_value: 45671
+
+symphony_in_c_description:
+  identifier: description
+  display_name: Description
+  atype: text
+  ezr_content_object_id: 101
+  text_value: This is the description.

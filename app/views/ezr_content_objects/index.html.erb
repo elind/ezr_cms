@@ -1,0 +1,24 @@
+<h1>Listing ezr_content_objects</h1>
+
+<table>
+  <tr>
+    <th>Identifier</th>
+    <th>Display name</th>
+    <th>Ezr content class</th>
+  </tr>
+
+<% for ezr_content_object in @ezr_content_objects %>
+  <tr>
+    <td><%=h ezr_content_object.identifier %></td>
+    <td><%=h ezr_content_object.display_name %></td>
+    <td><%=h ezr_content_object.ezr_content_class_id %></td>
+    <td><%= link_to 'Show', ezr_content_object %></td>
+    <td><%= link_to 'Edit', edit_ezr_content_object_path(ezr_content_object) %></td>
+    <td><%= link_to 'Destroy', ezr_content_object, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ezr_content_object', new_ezr_content_object_path %>
