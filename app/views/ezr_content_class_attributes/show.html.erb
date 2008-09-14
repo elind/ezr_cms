@@ -1,0 +1,18 @@
+<p>
+  <b>Identifier:</b>
+  <%=h @ezr_content_class_attribute.identifier %>
+</p>
+
+<p>
+  <b>Display name:</b>
+  <%=h @ezr_content_class_attribute.display_name %>
+</p>
+
+<p>
+  <b>Content class:</b>
+  <%=h @ezr_content_class_attribute.content_class_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ezr_content_class_attribute_path(@ezr_content_class_attribute) %> |
+<%= link_to 'Back', ezr_content_class_attributes_path %>

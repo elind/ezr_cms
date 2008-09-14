@@ -1,0 +1,24 @@
+<h1>Editing ezr_content_class_attribute</h1>
+
+<% form_for(@ezr_content_class_attribute) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :identifier %><br />
+    <%= f.text_field :identifier %>
+  </p>
+  <p>
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </p>
+  <p>
+    <%= f.label :content_class_id %><br />
+    <%= f.text_field :content_class_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ezr_content_class_attribute %> |
+<%= link_to 'Back', ezr_content_class_attributes_path %>

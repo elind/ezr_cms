@@ -1,0 +1,8 @@
+<h3>Templates used:</h3>
+
+<% @templates_used.each do |template_used| -%>
+	<p>
+		<%= template_used[:requested] %>:
+		<%= template_used[:rendered] %>
+	</p>
+<% end -%>

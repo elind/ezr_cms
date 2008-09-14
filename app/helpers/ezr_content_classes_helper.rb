@@ -1,0 +1,2 @@
+module EzrContentClassesHelper
+end

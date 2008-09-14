@@ -1,0 +1,20 @@
+<h1>Editing ezr_content_class</h1>
+
+<% form_for(@ezr_content_class) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :identifier %><br />
+    <%= f.text_field :identifier %>
+  </p>
+  <p>
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ezr_content_class %> |
+<%= link_to 'Back', ezr_content_classes_path %>

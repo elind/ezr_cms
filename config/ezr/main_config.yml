@@ -1,0 +1,10 @@
+:default: &default_settings
+  :design:
+    :directories: [default]
+  :env:
+    :debug_mode: true
+
+:ubs:
+  <<: *default_settings
+  :design:
+    :directories: [ubs_en, ubs, default]
