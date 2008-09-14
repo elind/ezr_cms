@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :ezr_content_object_attributes
+
+  map.resources :ezr_content_object_attributes
+
+  map.resources :ezr_content_object_attributes
+
+  map.resources :ezr_content_objects
+
   map.resources :ezr_content_class_attributes
 
   map.resources :ezr_content_classes

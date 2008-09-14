@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   acts_as_ezr_controller
   
   # GET /pages

@@ -28,6 +28,7 @@ module L2
 #            end
 #          end
 
+          layout 'ezr'
           before_filter :ezr_setup
         end
       end

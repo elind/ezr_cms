@@ -6,6 +6,8 @@ class CreateEzrContentClasses < ActiveRecord::Migration
 
       t.timestamps
     end
+    directory = File.join(File.dirname(__FILE__), "../../test/fixtures" )
+    Fixtures.create_fixtures(directory, "ezr_content_classes" )
   end
 
   def self.down

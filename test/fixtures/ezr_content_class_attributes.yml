@@ -1,11 +1,13 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+tdd_content_class_attribute:
+  id: 1
+  identifier: tdd_content_class_attribute
+  display_name: TDD Content Class Attribute
+  ezr_content_class_id: 1
+  atype: String
 
-one:
-  identifier: MyString
-  display_name: MyString
-  content_class_id: 1
-
-two:
-  identifier: MyString
-  display_name: MyString
-  content_class_id: 1
+sheet_music_title:
+  id: 201
+  identifier: title
+  display_name: Title
+  ezr_content_class_id: 101
+  atype: String

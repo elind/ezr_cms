@@ -1,9 +1,9 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+tdd_content_class:
+  id: 1
+  identifier: tdd_content_class
+  display_name: TDD Content Class
 
-one:
-  identifier: MyString
-  display_name: MyString
-
-two:
-  identifier: MyString
-  display_name: MyString
+sheet_music:
+  id: 101
+  identifier: sheet_music
+  display_name: Sheet music
